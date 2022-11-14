@@ -28,3 +28,19 @@ int is_builtin(char **cmd, char *b)
 		return (0);
 	}
 }
+
+/**
+ * logout - This program frees the buffer and
+ * exits the program
+ * @cmd: a vector array of command line arguments
+ * @b: line_buffer created in main
+ *
+ * Return: void
+ */
+
+void logout(char **cmd, char *b)
+{
+	free(b);
+	free_cmds(cmd);
+	exit(0);
+}
