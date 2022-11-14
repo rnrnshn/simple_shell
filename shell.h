@@ -14,6 +14,7 @@
 #include <stdbool.h>
 
 /*string_handlers*/
+char *duplicate_str(char *str);
 int _strcmp(char *s1, char *s2);
 
 /*command_handler*/
