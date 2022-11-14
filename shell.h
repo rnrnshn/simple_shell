@@ -38,5 +38,51 @@ void handle_sig(int n);
 int cmd_type(char **cmd, char *b);
 void free_cmds(char **m);
 
+/*environment variables*/
+extern __sighandler_t signal(int __sig, __sighandler_t __handler);
+extern char **environ;
+
+/**
+ * struct builtins - Handles builtins
+ * @env: First member
+ * @exit: Second member
+ *
+ * Description: builtin commands
+ */
+struct builtins
+{
+	char *env;
+	char *exit;
+
+} builtins;
+
+
+/**
+ * struct info - Status info struct
+ * @final_exit: First member
+ * @ln_count: Second member
+ *
+ * Description: Used in error handling
+ */
+struct info
+{
+	int final_exit;
+	int ln_count;
+} info;
+
+
+/**
+ * struct flags - Holds flags
+ * @interactive: First member
+ *
+ * Description: used to handle
+ *
+ * boolean switches
+ */
+struct flags
+{
+	bool interactive;
+} flags;
+
 
 #endif /* __SHELL_H__ */
