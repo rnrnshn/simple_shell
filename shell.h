@@ -17,6 +17,7 @@
 char *_getpath(void);
 char **tokenize(char *str);
 void exec_cmd(char *c, char **cmd);
+char *append_path(char *path, char *cmd);
 char *search_path(char **p, char *cmd);
 
 /* built-ins prototypes */
