@@ -44,3 +44,22 @@ void logout(char **cmd, char *b)
 	free_cmds(cmd);
 	exit(0);
 }
+
+/**
+ * env_builtin - This program is prints the current
+ * environment
+ *
+ * Return: 0
+ */
+void env_builtin(void)
+{
+	int i = 0;
+	char **env = environ;
+
+	while (env[i])
+	{
+		write(STDOUT_FILENO, (const void *) env[i], _strlen(env[i]));
+		write(STDOUT_FILENO, "\n", 1);
+		i++;
+	}
+}
