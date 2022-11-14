@@ -1,0 +1,30 @@
+#include "shell.h"
+
+/**
+ * is_builtin - This program checks to see if a command is
+ * a builtin function and if so, executes it
+ * @cmd: a vector array of command line arguments
+ * @b: line_buffer created in main
+ *
+ * Return: 1 if command is a builtin, 0 otherwise
+ */
+
+int is_builtin(char **cmd, char *b)
+{
+	struct builtins builtins = { "env", "exit" };
+
+	if (_strcmp(*cmd, builtins.env) == 0)
+	{
+		env_builtin();
+		return (1);
+	}
+	else if (_strcmp(*cmd, builtins.exit) == 0)
+	{
+		logout(cmd, b);
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
