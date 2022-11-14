@@ -15,6 +15,7 @@
 
 /*string_handlers*/
 char *duplicate_str(char *str);
+int _strlen(const char *str);
 int _strcmp(char *s1, char *s2);
 int _strncmp(const char *first, const char *second, int n);
 
