@@ -25,8 +25,6 @@ int is_builtin(char **cmd, char *b);
 void prompt_printer(void);
 void handle_sig(int n);
 
-
-
 /* helper prototypes */
 int cmd_type(char **cmd, char *b);
 void free_cmds(char **m);
