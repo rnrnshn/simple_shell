@@ -14,6 +14,7 @@
 #include <stdbool.h>
 
 /* built-ins prototypes */
+void env_builtin(void);
 void logout(char **cmd, char *b);
 int is_builtin(char **cmd, char *b);
 void prompt_printer(void);
