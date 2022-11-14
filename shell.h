@@ -13,4 +13,6 @@
 #include <sys/types.h>
 #include <stdbool.h>
 
+void prompt_printer(void);
+
 #endif /* __SHELL_H__ */
