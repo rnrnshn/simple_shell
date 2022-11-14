@@ -51,3 +51,17 @@ int main(int argc, char *argv[], char *envp[])
 	free(lineptr);
 	return (0);
 }
+
+/**
+ * prompt_printer - This program prints the prompt if the
+ * shell is in interactive mode
+ *
+ * Return: void
+ */
+void prompt_printer(void)
+{
+	if ((isatty(STDIN_FILENO) == 1) && (isatty(STDOUT_FILENO) == 1))
+		flags.interactive = 1;
+	if (flags.interactive)
+		write(STDERR_FILENO, "$ ", 2);
+}
