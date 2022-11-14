@@ -77,3 +77,25 @@ void handle_sig(int n __attribute__((unused)))
 	write(STDERR_FILENO, "\n", 1);
 	write(STDERR_FILENO, "$ ", 2);
 }
+
+/**
+ * cmd_type - Checks the command whether its a built-in or executable
+ * with a pathname
+ * @cmd: array of pointers to command line arguments
+ * @b: lineptr returned by getline function
+ *
+ * Return: 1 if the command is executed, 0 otherwise
+ */
+int cmd_type(char **cmd, char *b)
+{
+	if (is_builtin(cmd, b))
+	{
+		return (1);
+	}
+	else if (**cmd == '/')
+	{
+		exec_cmd(cmd[0], cmd);
+		return (1);
+	}
+	return (0);
+}
