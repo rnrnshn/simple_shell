@@ -1,0 +1,32 @@
+.TH man Simple Shell "November 6th 2022" "version 1.0"
+
+.SH NAME
+.B Simple Shell (hsh)
+ - command interpreter (shell)
+
+.SH SYNOPSIS
+.PP
+. ./hsh
+
+.PP
+.B
+.SH DESCRIPTION
+The Simple Shell is a command line interpreter that reads lines from the terminan \
+, and executes them.
+Simple shell works both in interactive mode and non interactive mode.
+.PP
+.SH EXAMPLE:
+$ ./hsh
+echo "/bin/ls" | ./hsh
+
+.PP
+.B Simple Shell has two built in commands: \
+
+.PP
+ exit - To logout of the shell.
+
+.PP
+env - Displays all the environment variables with their values.
+
+.SH AUTHORS
+.B Miguel de Oliveira and Olimpio Adolfo
