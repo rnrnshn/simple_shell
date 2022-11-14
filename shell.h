@@ -13,7 +13,13 @@
 #include <sys/types.h>
 #include <stdbool.h>
 
+/* built-ins prototypes */
 void prompt_printer(void);
 void handle_sig(int n);
+
+/* helper prototypes */
+int cmd_type(char **cmd, char *b);
+void free_cmds(char **m);
+
 
 #endif /* __SHELL_H__ */
