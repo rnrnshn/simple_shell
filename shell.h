@@ -14,5 +14,6 @@
 #include <stdbool.h>
 
 void prompt_printer(void);
+void handle_sig(int n);
 
 #endif /* __SHELL_H__ */
