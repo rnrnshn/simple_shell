@@ -14,6 +14,7 @@
 #include <stdbool.h>
 
 /*command_handler*/
+char *_getpath(void);
 char **tokenize(char *str);
 void exec_cmd(char *c, char **cmd);
 
