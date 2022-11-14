@@ -13,6 +13,10 @@
 #include <sys/types.h>
 #include <stdbool.h>
 
+/*command_handler*/
+void exec_cmd(char *c, char **cmd);
+
+
 /* built-ins prototypes */
 void env_builtin(void);
 void logout(char **cmd, char *b);
