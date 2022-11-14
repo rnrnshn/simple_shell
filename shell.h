@@ -13,6 +13,9 @@
 #include <sys/types.h>
 #include <stdbool.h>
 
+/*string_handlers*/
+int _strcmp(char *s1, char *s2);
+
 /*command_handler*/
 char *_getpath(void);
 char **tokenize(char *str);
