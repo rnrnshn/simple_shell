@@ -86,3 +86,15 @@ struct flags
 
 
 #endif /* __SHELL_H__ */
+/* toem_getenv.c */
+char **get_environ(info_t *);
+int _unsetenv(info_t *, char *);
+int _setenv(info_t *, char *, char *);
+
+/* toem_errors1.c */
+int _erratoi(char *);
+void print_error(info_t *, char *);
+int print_d(int, int);
+char *convert_number(long int, int, int);
+void remove_comments(char *);
+
